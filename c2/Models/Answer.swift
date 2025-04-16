@@ -9,6 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
+
 final class Answer {
     var id: UUID
     var questionID: UUID

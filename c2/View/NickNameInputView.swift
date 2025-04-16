@@ -39,8 +39,6 @@ struct NickNameInputView: View {
                 Button(action: {
                     if Runner.isNicknameValid(nickname) {
                         showSelectedView = true
-                        UserDefaults.standard.set(nickname, forKey: "nickName")
-                        let nickName = UserDefaults.standard.string(forKey: "nickName") ?? ""
                     } else {
                         showAlert = true
                     }

@@ -13,6 +13,8 @@ import SwiftData
 
 @Observable
 @MainActor
+
+
 final class AnswerService {
     //싱글톤 인스턴스
     static let shared = AnswerService()
