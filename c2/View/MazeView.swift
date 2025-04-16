@@ -6,9 +6,14 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct MazeView: View {
-    @State private var answer: String = ""
+    
+//    @State private var answer: String = ""
+//    @Environment(\.modelContext) var modelContext
+    @Query private var items: [RunnerAnswer]
+    
     var body: some View {
         
         NavigationStack {
