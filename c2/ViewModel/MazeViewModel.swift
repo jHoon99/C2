@@ -45,6 +45,20 @@ final class MazeViewModel {
         self.modelContext = modelContext
     }
     
+    // 답변하지 않은 질문들을 로드하고 랜덤하게 7개 선택
+    func loadQuestion() {
+        do {
+            // 기존 답변들 조회
+            let descriptor = FetchDescriptor<RunnerAnswer>()
+            let answers = try modelContext.fetch(descriptor)
+            let answeredID = Set(answers.map { $0.quewstionID } )
+            
+            
+            
+        } catch {
+            
+        }
+    }
     
     
     

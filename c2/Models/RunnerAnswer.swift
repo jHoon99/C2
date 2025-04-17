@@ -20,5 +20,4 @@ final class RunnerAnswer: Identifiable {
         self.quewstionID = quewstionID
         self.selectedIndex = selectedIndex
     }
-    
 }
