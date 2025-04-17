@@ -10,6 +10,7 @@ import SwiftUI
 struct SelectedView: View {
     
     @State private var showMazeView: Bool = false
+    @Environment(\.modelContext) var modelContext
     
     
     var body: some View {
@@ -30,7 +31,9 @@ struct SelectedView: View {
                 
                 HStack {
                     
-                    NavigationLink(destination: MazeView()) {
+                    NavigationLink(
+                        destination: MazeView(viewModel: MazeViewModel(runner: Runner(nickname: ""), modelContext: modelContext)))
+                    {
                         //mazeView 이동
                         Text("러너 미로 풀기")
                             .font(.system(size: 18, weight: .medium))

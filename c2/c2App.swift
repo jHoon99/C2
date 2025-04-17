@@ -44,7 +44,7 @@ struct c2App: App {
     
     var body: some Scene {
         WindowGroup {
-            MazeView()
+            ContentView()
         }
         .modelContainer(modelContainer)
     }

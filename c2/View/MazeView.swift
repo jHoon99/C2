@@ -10,9 +10,10 @@ import SwiftData
 
 struct MazeView: View {
     
-//    @State private var answer: String = ""
-//    @Environment(\.modelContext) var modelContext
-    @Query private var items: [RunnerAnswer]
+    @StateObject var viewModelPreview = MazeViewModel(runner: Runner(nickname: ""), modelContext: nil)
+    @StateObject var viewModel: MazeViewModel
+    @Environment(\.modelContext) var modelContext
+    @Query var items: [RunnerAnswer]
     
     var body: some View {
         
@@ -37,5 +38,10 @@ struct MazeView: View {
     }
 }
 #Preview {
-    MazeView()
+    @Previewable @Environment(\.modelContext) var modelContext
+    let viewModel = MazeViewModel(runner: Runner(nickname: ""), modelContext: modelContext)
+    MazeView(viewModel: viewModel)
 }
+
+
+
