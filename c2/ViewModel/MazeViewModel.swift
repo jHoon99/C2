@@ -27,18 +27,29 @@ final class MazeViewModel {
     // 배열 인덱스로만 비교하는것은 안될거같아서 키값을 사용
     private(set) var answerDictionary: [UUID: Int] = [:]
     
+    private(set) var savedAnswers: [RunnerAnswer] = []
+    
     
     
     
     // 현재 표시되어야 하는 질문
     var currentQuestion: Question? {
-        selectedRandomQuestion[currentQuestionIndex]
-    }
+            guard !selectedRandomQuestion.isEmpty,
+                  currentQuestionIndex < selectedRandomQuestion.count
+            else {
+                return nil
+            }
+        return selectedRandomQuestion[currentQuestionIndex]
+        }
+
     
     // 모든 질문에 답변했는지 여부
     var isComplete: Bool {
-        currentQuestionIndex == selectedRandomQuestion.count
-    }
+            guard !selectedRandomQuestion.isEmpty else { return false }
+            return currentQuestionIndex == selectedRandomQuestion.count - 1 &&
+            answerDictionary.count == selectedRandomQuestion.count
+        }
+
     
     // 현재까지의 답변 수
     var answerdCount: Int {
@@ -52,6 +63,21 @@ final class MazeViewModel {
         self.runner = runner
         self.modelContext = modelContext
     }
+    
+    
+    // 저장된 답변들을 불러오는 메서드
+    func loadSavedAnswers() {
+        do {
+            let descriptor = FetchDescriptor<RunnerAnswer>()
+            let answers = try modelContext!.fetch(descriptor)
+            savedAnswers = answers
+        } catch {
+            print("error: \(error)")
+        }
+    }
+    
+    
+    
     
     // 답변하지 않은 질문들을 로드하고 랜덤하게 7개 선택
     func loadQuestion() {
@@ -69,6 +95,10 @@ final class MazeViewModel {
             
             // 답변하지 않은 질문들 중에서 7개 랜덤 선택
             selectedRandomQuestion = Array(availableQuestions.shuffled().prefix(7))
+            
+//            answerDictionary.removeAll()
+//            
+//            currentQuestionIndex = 0
  
         } catch {
             selectedRandomQuestion = Array(Question.allQuestions.shuffled().prefix(7))

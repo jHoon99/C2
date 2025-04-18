@@ -54,7 +54,6 @@ struct NickNameInputView: View {
                 .padding(.horizontal, 20)
                 .padding(.bottom, 20)
                 .navigationDestination(isPresented: $showSelectedView) {
-                    
                     c2.SelectedView()
                 }
                 .alert(isPresented: $showAlert) {

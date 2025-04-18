@@ -11,12 +11,12 @@ import SwiftData
 @Model
 
 final class RunnerAnswer: Identifiable {
-    var id: UUID
+//    var id: UUID
     var quewstionID: UUID
     var selectedIndex: Int
     
     init(id: UUID, quewstionID: UUID, selectedIndex: Int) {
-        self.id = id
+//        self.id = id
         self.quewstionID = quewstionID
         self.selectedIndex = selectedIndex
     }

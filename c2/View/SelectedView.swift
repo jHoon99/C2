@@ -66,6 +66,7 @@ struct SelectedView: View {
                 
             }
             .padding(.top, 200)
+            
         }
     }
 }
