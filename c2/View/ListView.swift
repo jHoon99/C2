@@ -3,7 +3,7 @@
 //  c2
 //
 //  Created by 조재훈 on 4/17/25.
-//
+// 씨이이이ㅣ이이이이이이이ㅣ발
 
 import SwiftUI
 import SwiftData
