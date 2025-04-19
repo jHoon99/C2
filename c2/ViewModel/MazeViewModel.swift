@@ -19,9 +19,12 @@ final class MazeViewModel {
     
     // 현재 보여지는 질문의 인덱스
     private(set) var currentQuestionIndex = 0
-    
+    private(set) var currentSessionAnswer: [RunnerAnswer] = []
     // 랜덤으로 선택된 7개의 질문 배열
     private(set) var selectedRandomQuestion: [Question] = []
+    
+    let currentSessionID: UUID
+    let timeStamp: Date
     
     // 사용자가 선택한 답변들을 저장하는 배열
     // 배열 인덱스로만 비교하는것은 안될거같아서 키값을 사용
@@ -62,6 +65,8 @@ final class MazeViewModel {
     ) {
         self.runner = runner
         self.modelContext = modelContext
+        self.currentSessionID = UUID()
+        self.timeStamp = Date()
     }
     
     
@@ -80,29 +85,36 @@ final class MazeViewModel {
     
     
     // 답변하지 않은 질문들을 로드하고 랜덤하게 7개 선택
-    func loadQuestion() {
-        do {
-            // 기존 답변들 조회
-            let descriptor = FetchDescriptor<RunnerAnswer>()
-            let answers = try modelContext!.fetch(descriptor)
-            let answerdDict = Dictionary(
-                answers.map { ( $0.quewstionID, $0.selectedIndex ) },
-                uniquingKeysWith: { first, _ in first}
-            )
-            
-            // 답변하지 않은 질문들 필터링
-            let availableQuestions = Question.allQuestions.filter { !answerdDict.keys.contains($0.id) }
-            
-            // 답변하지 않은 질문들 중에서 7개 랜덤 선택
-            selectedRandomQuestion = Array(availableQuestions.shuffled().prefix(7))
-            
-//            answerDictionary.removeAll()
+//    func loadQuestion() {
+//        do {
+//            // 기존 답변들 조회
+//            let descriptor = FetchDescriptor<RunnerAnswer>()
+//            let answers = try modelContext!.fetch(descriptor)
+//            let answerdDict = Dictionary(
+//                answers.map { ( $0.quewstionID, $0.selectedIndex ) },
+//                uniquingKeysWith: { first, _ in first}
+//            )
 //            
-//            currentQuestionIndex = 0
- 
-        } catch {
-            selectedRandomQuestion = Array(Question.allQuestions.shuffled().prefix(7))
-        }
+//            // 답변하지 않은 질문들 필터링
+//            let availableQuestions = Question.allQuestions.filter { !answerdDict.keys.contains($0.id) }
+//            
+//            // 답변하지 않은 질문들 중에서 7개 랜덤 선택
+//            selectedRandomQuestion = Array(availableQuestions.shuffled().prefix(7))
+//            
+////            answerDictionary.removeAll()
+////            
+////            currentQuestionIndex = 0
+// 
+//        } catch {
+//            selectedRandomQuestion = Array(Question.allQuestions.shuffled().prefix(7))
+//        }
+//    }
+    
+    func loadQuestion() {
+        selectedRandomQuestion = Array(Question.allQuestions.shuffled().prefix(7))
+        answerDictionary.removeAll()
+        currentQuestionIndex = 0
+        currentSessionAnswer.removeAll()
     }
     
     
@@ -117,15 +129,19 @@ final class MazeViewModel {
         let answer = RunnerAnswer(
             id: UUID(),
             quewstionID: currentQuestion.id,
-            selectedIndex: index
+            selectedIndex: index,
+            sessionID: currentSessionID,
+            timestamp: timeStamp
         )
         modelContext!.insert(answer)
+        currentSessionAnswer.append(answer)
         
         do {
             try modelContext!.save()
         } catch {
             print("Error saving answer: \(error)")
             answerDictionary.removeValue(forKey: currentQuestion.id)
+            currentSessionAnswer.removeLast()
         }
     }
     

@@ -11,14 +11,16 @@ import SwiftData
 struct ListView: View {
     
     @Environment(\.modelContext) var modelContext
-    @StateObject var viewModel: MazeViewModel
-    @State private var answers: [RunnerAnswer] = []
+    @State private var viewModel: MazeViewModel
+    
+    init(viewModel: MazeViewModel) {
+        _viewModel = State(initialValue: viewModel)
+    }
     
     var body: some View {
         
-        NavigationStack {
             List {
-                ForEach(answers) { answer in
+                ForEach(viewModel.currentSessionAnswer, id: \.id) { answer in
                     if let question = Question.allQuestions.first(where: { $0.id == answer.quewstionID }) {
                         HStack {
                             Text("\(question.answers[answer.selectedIndex].text) \(question.answers[answer.selectedIndex].emoji)")
@@ -31,16 +33,26 @@ struct ListView: View {
                         .listRowBackground(Color.clear)
                         .listRowSeparator(.hidden)
                     }
-                }
             }
-            
+            NavigationLink(destination: MatchingView()) {
+                Text("너 누구야?")
+                    .font(.system(size: 20, weight: .medium))
+                    .foregroundColor(.black)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 30)
+                    .padding(.vertical, 15)
+                    .background(RoundedRectangle(cornerRadius: 20).fill(Color(hex: "5ea152")))
+            }
+            .padding(.horizontal, 20)
+            .padding(.bottom, 20)
         }
-        .onAppear {
-            viewModel.loadSavedAnswers()
-            answers = viewModel.savedAnswers
+        
+//        .onAppear {
+//            viewModel.loadSavedAnswers()
+//            answers = viewModel.savedAnswers
         }
     }
-}
+
 
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
@@ -49,10 +61,13 @@ struct ListView_Previews: PreviewProvider {
         
         // 테스트 데이터 생성
         let context = container.mainContext
+        let sessionID = UUID()
+        let timeStamp = Date()
+        
         let testAnswers = [
-            RunnerAnswer(id: UUID(), quewstionID: Question.allQuestions[0].id, selectedIndex: 0),
-            RunnerAnswer(id: UUID(), quewstionID: Question.allQuestions[1].id, selectedIndex: 1),
-            RunnerAnswer(id: UUID(), quewstionID: Question.allQuestions[2].id, selectedIndex: 0)
+            RunnerAnswer(id: UUID(), quewstionID: Question.allQuestions[0].id, selectedIndex: 0, sessionID: sessionID, timestamp: timeStamp),
+            RunnerAnswer(id: UUID(), quewstionID: Question.allQuestions[1].id, selectedIndex: 1, sessionID: sessionID, timestamp: timeStamp),
+            RunnerAnswer(id: UUID(), quewstionID: Question.allQuestions[2].id, selectedIndex: 0, sessionID: sessionID, timestamp: timeStamp)
         ]
         
         testAnswers.forEach { context.insert($0) }

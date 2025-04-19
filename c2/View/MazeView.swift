@@ -10,13 +10,17 @@ import SwiftData
 
 struct MazeView: View {
     
-    @StateObject var viewModelPreview = MazeViewModel(runner: Runner(nickname: ""), modelContext: nil)
-    @StateObject var viewModel: MazeViewModel
+    
+    @State private var viewModel: MazeViewModel
     @Environment(\.modelContext) var modelContext
-    @Query var items: [RunnerAnswer]
+    
     
     @State private var showListView: Bool = false
     @State private var hourglassRotation: Double = 0
+    
+    init(viewModel: MazeViewModel) {
+        _viewModel = State(initialValue: viewModel)
+    }
     
     private var progress : Double {
         Double(viewModel.answerdCount) / Double(viewModel.selectedRandomQuestion.count)
@@ -90,9 +94,9 @@ struct MazeView: View {
                         }
                 }
                 .padding(.bottom, 50)
-                .navigationDestination(isPresented: $showListView) {
-                    ListView(viewModel: viewModel)
-                }
+            }
+            .navigationDestination(isPresented: $showListView) {
+                ListView(viewModel: viewModel)
             }
         }
         .onAppear {
@@ -114,6 +118,3 @@ struct MazeView: View {
     let viewModel = MazeViewModel(runner: Runner(nickname: ""), modelContext: modelContext)
     MazeView(viewModel: viewModel)
 }
-
-
-

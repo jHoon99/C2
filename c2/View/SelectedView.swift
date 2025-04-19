@@ -49,8 +49,7 @@ struct SelectedView: View {
                         .fill(.white)
                         .frame(width: 1)
                     
-                    NavigationLink(destination: messageView()) {
-                        //메세지 뷰로 이동
+                    NavigationLink(destination: HistoryView()) {
                         Text("나에게 온 메세지")
                             .font(.system(size: 18, weight: .medium))
                             .foregroundColor(.black)
