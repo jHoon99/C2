@@ -12,6 +12,7 @@ import SwiftData
 struct MatchingView: View {
     @StateObject var viewModel: MazeViewModel
     @State var BackSelectedView: Bool = false
+    @State private var nickName: String = ""
 
     var body: some View {
         VStack(spacing: 32) {
@@ -19,7 +20,7 @@ struct MatchingView: View {
             VStack(spacing: 16) {
                 Text("당신과 가장 잘 맞는 러너는")
                     .font(.headline)
-                Text("\(viewModel.matchedRunner?.nickname ?? "없") 입니다!")
+                Text("\(nickName) 입니다!")
                     .font(.largeTitle)
                     .bold()
                 Text("이런게 잘 맞아요!")
@@ -66,8 +67,10 @@ struct MatchingView: View {
         .navigationTitle("maze Runner")
         .navigationBarTitleDisplayMode(.inline)
         .onAppear {
+            //MARK: 등록된 러너들불러옴
             viewModel.loadPreloadedRunners()
-            viewModel.findBestMatch()
+            //MARK: 가장 비슷한 사람 찾기
+            nickName = viewModel.findBestMatch()
         }
     }
 }
@@ -82,8 +85,8 @@ struct MatchingView_Previews: PreviewProvider {
         // 테스트 데이터 생성
         let sessionID = UUID()
         let testAnswers = [
-            RunnerAnswer(id: UUID(), quewstionID: Question.allQuestions[0].id, selectedIndex: 0, sessionID: sessionID, timestamp: Date()),
-            RunnerAnswer(id: UUID(), quewstionID: Question.allQuestions[1].id, selectedIndex: 1, sessionID: sessionID, timestamp: Date())
+            RunnerAnswer(id: UUID(), quewstionID: Question.allQuestions[0].id, selectedIndex: 0, sessionID: sessionID, timestamp: Date(), questionText: ""),
+            RunnerAnswer(id: UUID(), quewstionID: Question.allQuestions[1].id, selectedIndex: 1, sessionID: sessionID, timestamp: Date(), questionText: "")
         ]
         
         // 답변 저장

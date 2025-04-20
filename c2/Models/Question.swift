@@ -189,3 +189,10 @@ struct Question: Identifiable {
 //        )
     ]
 }
+extension Question {
+    static let idByText: [String: UUID] = {
+        Dictionary(
+            uniqueKeysWithValues: allQuestions.map { ($0.text, $0.id) }
+        )
+    }()
+}
