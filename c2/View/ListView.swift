@@ -34,16 +34,18 @@ struct ListView: View {
                         .listRowSeparator(.hidden)
                     }
             }
-            NavigationLink(destination: MatchingView()) {
+                NavigationLink(destination: MatchingView(viewModel: viewModel)) {
                 Text("너 누구야?")
                     .font(.system(size: 20, weight: .medium))
                     .foregroundColor(.black)
                     .frame(maxWidth: .infinity)
-                    .frame(height: 30)
+                    .frame(height: 50)
                     .padding(.vertical, 15)
                     .background(RoundedRectangle(cornerRadius: 20).fill(Color(hex: "5ea152")))
             }
-            .padding(.horizontal, 20)
+            .listRowBackground(Color.clear)
+            .listRowSeparator(.hidden)
+            
             .padding(.bottom, 20)
         }
         

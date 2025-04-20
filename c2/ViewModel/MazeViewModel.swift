@@ -15,7 +15,7 @@ final class MazeViewModel {
     // SwiftData 저장
     private let modelContext: ModelContext?
     
-    private let runner: Runner
+    var runner: Runner
     
     // 현재 보여지는 질문의 인덱스
     private(set) var currentQuestionIndex = 0
@@ -25,12 +25,17 @@ final class MazeViewModel {
     
     let currentSessionID: UUID
     let timeStamp: Date
+    private var preloadedRunners: [Runners] = []
+    var matchedRunnerName: String = ""
     
     // 사용자가 선택한 답변들을 저장하는 배열
     // 배열 인덱스로만 비교하는것은 안될거같아서 키값을 사용
     private(set) var answerDictionary: [UUID: Int] = [:]
     
     private(set) var savedAnswers: [RunnerAnswer] = []
+    
+    private(set) var matchedRunner: MatchedRunner?
+    
     
     
     
@@ -67,7 +72,79 @@ final class MazeViewModel {
         self.modelContext = modelContext
         self.currentSessionID = UUID()
         self.timeStamp = Date()
+        
+        loadPreloadedRunners()
     }
+    
+    func loadPreloadedRunners() {
+        guard let url = Bundle.main.url(forResource: "RunnersData", withExtension: "json"),
+              let data = try? Data(contentsOf: url) else {
+            print("Error: Could not find or load RunnersData.json")
+            return
+        }
+        do {
+            let decoder = JSONDecoder()
+            let runnersData = try decoder.decode(MatchedRunnerModel.self, from: data)
+            self.preloadedRunners = runnersData.runners
+            print(runnersData)
+        } catch {
+            print("Error loading runners data: \(error)")
+        }
+    }
+    
+    func findBestMatch() {
+            // 답변 딕셔너리를 기반으로 가장 잘 맞는 러너 찾기
+            let sortedRunners = preloadedRunners.sorted { runner1, runner2 in
+//                let score1 = calculateMatchScore(runner1)
+//                let score2 = calculateMatchScore(runner2)
+//                return score1 > score2
+                print(runner1)
+                print(runner2)
+                
+                return true
+            }
+            
+//            if let bestMatch = sortedRunners.first {
+//                self.matchedRunner = bestMatch
+//            }
+        }
+        
+        private func calculateMatchScore(_ runner: MatchedRunner) -> Int {
+            var score = 0
+            for answer in currentSessionAnswer {
+                if let matchingAnswer = runner.answers.first(where: { $0.questionId == answer.quewstionID }) {
+                    if matchingAnswer.selectedIndex == answer.selectedIndex {
+                        score += 1
+                    }
+                  }
+                }
+            return score
+            }
+
+    
+//    private func findBestMatch() {
+//        guard !currentSessionAnswer.isEmpty else { return }
+//        
+//        var bestMatch: MatchedRunner? = nil
+//        var highestScore = 0
+//        
+//        for var runner in preloadedRunners {
+//            var score = 0
+//            for answer in currentSessionAnswer {
+//                if let preloadedAnswer = runner.answers.first(where: { $0.questionId == answer.quewstionID }) {
+//                    if preloadedAnswer.selectedIndex == answer.selectedIndex {
+//                        score += 1
+//                    }
+//                }
+//            }
+//            runner.matchScore = score
+//            if score > highestScore {
+//                highestScore = score
+//                bestMatch = runner
+//            }
+//        }
+//    matchedRunnerName = bestMatch?.nickname ?? "미등록 사용자"
+//    }
     
     
     // 저장된 답변들을 불러오는 메서드
@@ -155,7 +232,21 @@ final class MazeViewModel {
     
     
     
-    
+    struct RunnersDataContainer: Decodable {
+        let runners: [MatchedRunner]
+    }
+
+    struct MatchedRunner: Identifiable, Decodable {
+        let id: String
+        let nickname: String
+        let answers: [PreloadedAnswer]
+        var matchScore: Int = 0
+        
+        struct PreloadedAnswer: Decodable {
+            let questionId: UUID
+            let selectedIndex: Int
+        }
+    }
 }
 
 

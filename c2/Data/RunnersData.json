@@ -1,0 +1,667 @@
+{
+    "runners": [
+        {
+            "id": "1",
+            "nickname": "광로",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 0},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 0},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 0},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 0},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 0}
+            ]
+        },
+        {
+            "id": "2",
+            "nickname": "그린",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 0},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 0},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 0},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 1},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 0}
+            ]
+        },
+        {
+            "id": "3",
+            "nickname": "내일",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 1},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 0},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 1},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 0},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 1}
+            ]
+        },
+        {
+            "id": "4",
+            "nickname": "니카",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 1},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 1},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 1},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 1},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 0},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 0}
+            ]
+        },
+        {
+            "id": "5",
+            "nickname": "듀이",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 0},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 0},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 0},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 0},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 1}
+            ]
+        },
+        {
+            "id": "6",
+            "nickname": "런도",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 0},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 0},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 0},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 0},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 0}
+            ]
+        },
+        {
+            "id": "7",
+            "nickname": "로드",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 1},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 0},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 1},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 0},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 1},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 0},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 1}
+            ]
+        },
+        {
+            "id": "8",
+            "nickname": "로아",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 0},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 1},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 1},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 0},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 1},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 1},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 0}
+            ]
+        },
+        {
+            "id": "9",
+            "nickname": "리비",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 0},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 1},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 1},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 0},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 0}
+            ]
+        },
+        {
+            "id": "10",
+            "nickname": "리엘",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 1},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 1},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 1},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 0},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 0},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 0}
+            ]
+        },
+        {
+            "id": "11",
+            "nickname": "머피",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 0},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 1},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 1},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 1},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 0}
+            ]
+        },
+        {
+            "id": "12",
+            "nickname": "메이",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 1},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 1},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 1},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 1},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 1},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 0}
+            ]
+        },
+        {
+            "id": "13",
+            "nickname": "미르",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 0},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 0},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 1},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 1},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 1},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 1}
+            ]
+        },
+        {
+            "id": "14",
+            "nickname": "민볼",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 0},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 0},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 1},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 1},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 1}
+            ]
+        },
+        {
+            "id": "15",
+            "nickname": "벨코",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 0},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 1},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 1},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 0},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 0}
+            ]
+        },
+        {
+            "id": "16",
+            "nickname": "보타",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 0},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 0},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 1},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 1},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 0},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 0}
+            ]
+        },
+        {
+            "id": "17",
+            "nickname": "사나",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 1},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 1},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 1},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 1},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 1},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 0}
+            ]
+        },
+        {
+            "id": "18",
+            "nickname": "산들",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 0},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 1},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 0},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 1},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 1}
+            ]
+        },
+        {
+            "id": "19",
+            "nickname": "섭",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 1},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 1},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 0},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 1},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 0}
+            ]
+        },
+        {
+            "id": "20",
+            "nickname": "세오",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 1},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 0},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 1},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 1},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 1},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 0}
+            ]
+        },
+        {
+            "id": "21",
+            "nickname": "싸야",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 0},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 0},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 0},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 1},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 0},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 0}
+            ]
+        },
+        {
+            "id": "22",
+            "nickname": "아리",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 0},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 0},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 0},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 0},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 1}
+            ]
+        },
+        {
+            "id": "23",
+            "nickname": "아이작",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 0},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 1},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 1},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 0},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 0},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 0}
+            ]
+        },
+        {
+            "id": "24",
+            "nickname": "아이퍼",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 1},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 1},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 1},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 1},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 1},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 0}
+            ]
+        },
+        {
+            "id": "25",
+            "nickname": "아일라",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 0},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 0},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 0},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 1},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 1}
+            ]
+        },
+        {
+            "id": "26",
+            "nickname": "앤",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 1},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 1},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 0},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 1},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 0},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 0}
+            ]
+        },
+        {
+            "id": "27",
+            "nickname": "에녹",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 1},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 1},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 0},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 1},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 0}
+            ]
+        },
+        {
+            "id": "28",
+            "nickname": "에디",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 0},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 0},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 1},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 1},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 0}
+            ]
+        },
+        {
+            "id": "29",
+            "nickname": "에린",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 0},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 1},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 0},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 1},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 1},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 0}
+            ]
+        },
+        {
+            "id": "30",
+            "nickname": "엠마",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 0},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 0},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 1},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 1},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 1},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 1}
+            ]
+        },
+        {
+            "id": "31",
+            "nickname": "원",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 0},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 0},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 1},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 0},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 1},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 1},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 0}
+            ]
+        },
+        {
+            "id": "32",
+            "nickname": "원준",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 1},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 1},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 0},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 1},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 0}
+            ]
+        },
+        {
+            "id": "33",
+            "nickname": "웬디",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 0},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 0},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 0},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 0},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 0}
+            ]
+        },
+        {
+            "id": "34",
+            "nickname": "위시",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 0},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 1},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 1},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 0},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 0}
+            ]
+        },
+        {
+            "id": "35",
+            "nickname": "유하",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 1},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 0},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 0},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 0},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 1}
+            ]
+        },
+        {
+            "id": "36",
+            "nickname": "윤",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 0},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 0},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 1},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 1},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 1},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 0}
+            ]
+        },
+        {
+            "id": "37",
+            "nickname": "이사",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 1},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 1},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 0},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 1},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 0},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 0}
+            ]
+        },
+        {
+            "id": "38",
+            "nickname": "이토",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 0},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 1},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 0},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 1},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 0}
+            ]
+        },
+        {
+            "id": "39",
+            "nickname": "자니",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 0},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 0},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 0},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 0},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 1}
+            ]
+        },
+        {
+            "id": "40",
+            "nickname": "잭",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 0},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 0},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 0},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 0},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 0}
+            ]
+        },
+        {
+            "id": "41",
+            "nickname": "제나",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 0},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 0},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 0},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 1},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 1}
+            ]
+        },
+        {
+            "id": "42",
+            "nickname": "제옹",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 0},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 0},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 1},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 0},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 1}
+            ]
+        },
+        {
+            "id": "43",
+            "nickname": "제이",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 1},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 1},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 0},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 0},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 0}
+            ]
+        },
+        {
+            "id": "44",
+            "nickname": "제제",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 0},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 1},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 0},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 0},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 0}
+            ]
+        },
+        {
+            "id": "45",
+            "nickname": "주니",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 1},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 1},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 0},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 1},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 1},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 1}
+            ]
+        },
+        {
+            "id": "46",
+            "nickname": "주디",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 0},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 0},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 1},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 1},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 0}
+            ]
+        },
+        {
+            "id": "47",
+            "nickname": "주디제이",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 0},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 1},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 1},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 1},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 1},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 1}
+            ]
+        },
+        {
+            "id": "48",
+            "nickname": "지구",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 0},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 1},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 0},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 0},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 0},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 0}
+            ]
+        },
+        {
+            "id": "49",
+            "nickname": "지나",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 0},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 0},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 1},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 1},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 1},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 1},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 0}
+            ]
+        },
+        {
+            "id": "50",
+            "nickname": "카야",
+            "answers": [
+                {"questionId": "A1B2C3D4-E5F6-47G8-H9I0-J1K2L3M4N5O6", "selectedIndex": 0},
+                {"questionId": "B2C3D4E5-F6G7-48H9-I0J1-K2L3M4N5O6P7", "selectedIndex": 0},
+                {"questionId": "C3D4E5F6-G7H8-49I0-J1K2-L3M4N5O6P7Q8", "selectedIndex": 1},
+                {"questionId": "D4E5F6G7-H8I9-50J1-K2L3-M4N5O6P7Q8R9", "selectedIndex": 0},
+                {"questionId": "E5F6G7H8-I9J0-51K2-L3M4-N5O6P7Q8R9S0", "selectedIndex": 0},
+                {"questionId": "F6G7H8I9-J0K1-52L3-M4N5-O6P7Q8R9S0T1", "selectedIndex": 0},
+                {"questionId": "G7H8I9J0-K1L2-53M4-N5O6-P7Q8R9S0T1U2", "selectedIndex": 0}
+            ]
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    ]
+}
