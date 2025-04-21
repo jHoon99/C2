@@ -15,7 +15,7 @@ struct SelectedView: View {
     
     var body: some View {
         
-        NavigationStack {
+        
             
             VStack(spacing: 10) {
                 
@@ -49,7 +49,7 @@ struct SelectedView: View {
                         .fill(.white)
                         .frame(width: 1)
                     
-                    NavigationLink(destination: HistoryView()) {
+                    NavigationLink(destination: HistoryView(viewModel: MazeViewModel(runner: Runner(nickname: ""), modelContext: modelContext))) {
                         Text("나에게 온 메세지")
                             .font(.system(size: 18, weight: .medium))
                             .foregroundColor(.black)
@@ -68,7 +68,7 @@ struct SelectedView: View {
             
         }
     }
-}
+
 #Preview {
     SelectedView()
 }

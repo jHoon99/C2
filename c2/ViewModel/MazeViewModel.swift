@@ -133,19 +133,19 @@ final class MazeViewModel {
         return score
     }
     
-    // 저장된 답변들을 불러오는 메서드
-    func loadSavedAnswers() {
-        do {
-            let descriptor = FetchDescriptor<RunnerAnswer>(
-                sortBy: [SortDescriptor(\.timestamp, order: .forward)]
-            )
-            let answers = try modelContext!.fetch(descriptor)
-            savedAnswers = answers
-        } catch {
-            print("error: \(error)")
-        }
-    }
     
+//    func loadSavedAnswers() {
+//        do {
+//            let descriptor = FetchDescriptor<RunnerAnswer>(
+//                sortBy: [SortDescriptor(\.timestamp, order: .forward)]
+//            )
+//            let answers = try modelContext!.fetch(descriptor)
+//            savedAnswers = answers
+//        } catch {
+//            print("error: \(error)")
+//        }
+//    }
+//    
     
     
     
@@ -198,6 +198,10 @@ final class MazeViewModel {
             let questionId = Questions.idByText[currentQuestion.text]
                 else { return }
         answerDictionary[currentQuestion.id] = index
+        
+        let selectedAnswer = currentQuestion.answers[index]
+        let answerText = selectedAnswer.text
+        let answerEmoji = selectedAnswer.emoji
 //        Question.allQuestions[
         // SwiftData에 답변 저장
         let answer = RunnerAnswer(
@@ -206,19 +210,47 @@ final class MazeViewModel {
             selectedIndex: index,
             sessionID: currentSessionID,
             timestamp: timeStamp,
-            questionText: questionId
+            questionText: questionId,
+            selectedText: answerText,
+            selectedEmoji: answerEmoji
+            
         )
         modelContext!.insert(answer)
         currentSessionAnswer.append(answer)
         
         do {
             try modelContext!.save()
+            loadSavedAnswers() // 저장후 불러오는 리스트 ?
         } catch {
             print("Error saving answer: \(error)")
             answerDictionary.removeValue(forKey: currentQuestion.id)
             currentSessionAnswer.removeLast()
         }
     }
+    
+    // 저장된 답변들을 불러오는 메서드
+    func loadSavedAnswers() {
+        do {
+            guard let context = modelContext else {
+                print("modelContext is nil")
+                return
+            }
+            
+            var descriptor = FetchDescriptor<RunnerAnswer>(
+                sortBy: [SortDescriptor(\.timestamp, order: .reverse)]
+            )
+            descriptor.fetchLimit = 21
+            
+            let answers = try context.fetch(descriptor)
+            savedAnswers = answers.reversed()
+            
+        } catch {
+            print("error \(error)")
+        }
+    }
+    
+    
+    
     
     
     // 다음 질문으로 이동

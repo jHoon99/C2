@@ -67,9 +67,9 @@ struct ListView_Previews: PreviewProvider {
         let timeStamp = Date()
         
         let testAnswers = [
-            RunnerAnswer(id: UUID(), quewstionID: Question.allQuestions[0].id, selectedIndex: 0, sessionID: sessionID, timestamp: timeStamp, questionText: ""),
-            RunnerAnswer(id: UUID(), quewstionID: Question.allQuestions[1].id, selectedIndex: 1, sessionID: sessionID, timestamp: timeStamp, questionText: ""),
-            RunnerAnswer(id: UUID(), quewstionID: Question.allQuestions[2].id, selectedIndex: 0, sessionID: sessionID, timestamp: timeStamp, questionText: "")
+            RunnerAnswer(id: UUID(), quewstionID: Question.allQuestions[0].id, selectedIndex: 0, sessionID: sessionID, timestamp: timeStamp, questionText: "", selectedText: "", selectedEmoji: ""),
+            RunnerAnswer(id: UUID(), quewstionID: Question.allQuestions[1].id, selectedIndex: 1, sessionID: sessionID, timestamp: timeStamp, questionText: "", selectedText: "", selectedEmoji: ""),
+            RunnerAnswer(id: UUID(), quewstionID: Question.allQuestions[2].id, selectedIndex: 0, sessionID: sessionID, timestamp: timeStamp, questionText: "", selectedText: "", selectedEmoji: "")
         ]
         
         testAnswers.forEach { context.insert($0) }

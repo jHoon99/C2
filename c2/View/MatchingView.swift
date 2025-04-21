@@ -85,8 +85,8 @@ struct MatchingView_Previews: PreviewProvider {
         // 테스트 데이터 생성
         let sessionID = UUID()
         let testAnswers = [
-            RunnerAnswer(id: UUID(), quewstionID: Question.allQuestions[0].id, selectedIndex: 0, sessionID: sessionID, timestamp: Date(), questionText: ""),
-            RunnerAnswer(id: UUID(), quewstionID: Question.allQuestions[1].id, selectedIndex: 1, sessionID: sessionID, timestamp: Date(), questionText: "")
+            RunnerAnswer(id: UUID(), quewstionID: Question.allQuestions[0].id, selectedIndex: 0, sessionID: sessionID, timestamp: Date(), questionText: "", selectedText: "", selectedEmoji: ""),
+            RunnerAnswer(id: UUID(), quewstionID: Question.allQuestions[1].id, selectedIndex: 1, sessionID: sessionID, timestamp: Date(), questionText: "", selectedText: "", selectedEmoji: "")
         ]
         
         // 답변 저장
