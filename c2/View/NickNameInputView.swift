@@ -38,7 +38,7 @@ struct NickNameInputView: View {
                 
                 Button(action: {
                     if Runner.isNicknameValid(nickname) {
-                        showSelectedView = true
+                        showSelectedView = true 
                     } else {
                         showAlert = true
                     }

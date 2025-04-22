@@ -9,7 +9,6 @@ import Foundation
 import SwiftData
 
 @Model
-
 final class RunnerAnswer: Identifiable {
     var id: UUID
     var quewstionID: UUID

@@ -28,7 +28,7 @@ struct MazeView: View {
     
     var body: some View {
         
-        NavigationStack {
+//        NavigationStack {
             
             VStack {
                 
@@ -73,6 +73,7 @@ struct MazeView: View {
                                 .frame(height: 300)
                                 .background(Color(hex: "5ea152").opacity(0.5))
                                 .cornerRadius(20)
+                                
                             }
                         }
                     }
@@ -83,7 +84,7 @@ struct MazeView: View {
                     
                     Text("비슷한 러너를 찾고 있어요...")
                         .font(.system(size: 25, weight: .medium))
-                        
+                    
                     Text("⏳")
                         .font(.title2)
                         .rotationEffect(.degrees(hourglassRotation))
@@ -95,10 +96,8 @@ struct MazeView: View {
                 }
                 .padding(.bottom, 50)
             }
-            .navigationDestination(isPresented: $showListView) {
-                ListView(viewModel: viewModel)
-            }
-        }
+
+//        }
         .onAppear {
             viewModel.loadQuestion()
         }
@@ -110,6 +109,9 @@ struct MazeView: View {
                     .foregroundColor(Color(hex: "5ea152"))
                 
             }
+        }
+        .navigationDestination(isPresented: $showListView) {
+            ListView(viewModel: viewModel)
         }
     }
 }

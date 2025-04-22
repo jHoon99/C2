@@ -10,7 +10,7 @@ import SwiftData
 
 
 @Observable
-final class MazeViewModel {
+final class MazeViewModel: ObservableObject {
     
     // SwiftData 저장
     private let modelContext: ModelContext?
@@ -23,8 +23,8 @@ final class MazeViewModel {
     // 랜덤으로 선택된 7개의 질문 배열
     private(set) var selectedRandomQuestion: [Question] = []
     
-    let currentSessionID: UUID
-    let timeStamp: Date
+    var currentSessionID: UUID
+    var timeStamp: Date
     private var preloadedRunners: [Runners] = []
     var matchedRunnerName: String = ""
     
@@ -34,9 +34,11 @@ final class MazeViewModel {
     
     private(set) var savedAnswers: [RunnerAnswer] = []
     
+    private(set) var latestSavedAnswers: [RunnerAnswer] = []
+    
     private(set) var matchedRunner: MatchedRunner?
     
-    
+    private(set) var sessionGroupes: [SessionGroup] = []
     
     
     
@@ -215,18 +217,58 @@ final class MazeViewModel {
             selectedEmoji: answerEmoji
             
         )
-        modelContext!.insert(answer)
+        modelContext?.insert(answer)
         currentSessionAnswer.append(answer)
+         
         
         do {
-            try modelContext!.save()
-            loadSavedAnswers() // 저장후 불러오는 리스트 ?
+            
+            try modelContext?.save()
+            if currentSessionAnswer.count == 7 {
+                currentSessionID = UUID()
+                timeStamp = Date()
+                loadSessionGroups()
+            }
+            
+           
         } catch {
             print("Error saving answer: \(error)")
             answerDictionary.removeValue(forKey: currentQuestion.id)
             currentSessionAnswer.removeLast()
         }
     }
+    
+    func loadSessionGroups() {
+        guard let context = modelContext else { return }
+        
+        do {
+            let descriptor = FetchDescriptor<RunnerAnswer>(
+                sortBy: [SortDescriptor(\.timestamp, order: .reverse)]
+            )
+            let allAnswers = try context.fetch(descriptor)
+            
+            // 세션 그룹화 (sessionID 별로)
+            let grouped = Dictionary(grouping: allAnswers) { $0.sessionID }
+            
+            // 7개 단위로 필터
+            sessionGroupes = grouped.compactMap { key, value in
+                guard value.count == 7 else { return nil }
+                return SessionGroup(
+                    id: key,
+                    timestamp: value.first?.timestamp ?? Date(),
+                    answers: value.sorted { $0.timestamp < $1.timestamp}
+                )
+            }
+            .sorted { $0.timestamp > $1.timestamp } // 최신 세션 정렬
+            
+            
+        } catch {
+            print("Error loading session groups: \(error)")
+        }
+        
+        
+    }
+
     
     // 저장된 답변들을 불러오는 메서드
     func loadSavedAnswers() {
@@ -239,7 +281,7 @@ final class MazeViewModel {
             var descriptor = FetchDescriptor<RunnerAnswer>(
                 sortBy: [SortDescriptor(\.timestamp, order: .reverse)]
             )
-            descriptor.fetchLimit = 21
+            descriptor.fetchLimit = 14
             
             let answers = try context.fetch(descriptor)
             savedAnswers = answers.reversed()
@@ -280,4 +322,44 @@ final class MazeViewModel {
 }
 
 
-extension MazeViewModel: ObservableObject {}
+extension MazeViewModel {
+    struct SessionGroup: Identifiable {
+        var id: UUID
+        var timestamp: Date
+        var answers: [RunnerAnswer]
+    }
+    
+//    func loadSessionGroups() {
+//        guard let context = modelContext else { return }
+//        
+//        do {
+//            let descriptor = FetchDescriptor<RunnerAnswer>(
+//                sortBy: [SortDescriptor(\.timestamp, order: .reverse)]
+//            )
+//            let allAnswers = try context.fetch(descriptor)
+//            
+//            // 세션 그룹화 (sessionID 별로)
+//            let grouped = Dictionary(grouping: allAnswers) { $0.sessionID }
+//            
+//            // 7개 단위로 필터
+//            sessionGroupes = grouped.compactMap { key, value in
+//                guard value.count == 7 else { return nil }
+//                return SessionGroup(
+//                    id: key,
+//                    timestamp: value.first?.timestamp ?? Date(),
+//                    answers: value.sorted { $0.timestamp < $1.timestamp}
+//                )
+//            }
+//            .sorted { $0.timestamp > $1.timestamp } // 최신 세션 정렬
+//            
+//            
+//        } catch {
+//            print("Error loading session groups: \(error)")
+//        }
+//        
+//        
+//    }
+}
+
+
+

@@ -11,7 +11,11 @@ struct SelectedView: View {
     
     @State private var showMazeView: Bool = false
     @Environment(\.modelContext) var modelContext
+    @State private var viewModel: MazeViewModel
     
+    init(viewModel: MazeViewModel = MazeViewModel(runner: Runner(nickname: ""), modelContext: nil)) {
+        _viewModel = State(initialValue: viewModel)
+    }
     
     var body: some View {
         
@@ -49,8 +53,8 @@ struct SelectedView: View {
                         .fill(.white)
                         .frame(width: 1)
                     
-                    NavigationLink(destination: HistoryView(viewModel: MazeViewModel(runner: Runner(nickname: ""), modelContext: modelContext))) {
-                        Text("나에게 온 메세지")
+                    NavigationLink(destination: HHistoryView(viewModel: MazeViewModel(runner: Runner(nickname: ""), modelContext: modelContext))) {
+                        Text("나의 히스토리")
                             .font(.system(size: 18, weight: .medium))
                             .foregroundColor(.black)
                             .frame(maxWidth: .infinity)

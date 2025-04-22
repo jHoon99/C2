@@ -10,6 +10,7 @@ import SwiftData
 
 
 struct MatchingView: View {
+    @Environment(\.modelContext) private var modelContext
     @StateObject var viewModel: MazeViewModel
     @State var BackSelectedView: Bool = false
     @State private var nickName: String = ""
@@ -46,9 +47,8 @@ struct MatchingView: View {
             .shadow(radius: 4)
 
             // 홈 화면 버튼
-            Button {
-                BackSelectedView = true
-            } label: {
+            
+            NavigationLink(destination: SelectedView()) {
                 Text("홈 화면")
                     .font(.headline)
                     .foregroundColor(.white)
@@ -58,13 +58,32 @@ struct MatchingView: View {
                     .cornerRadius(25)
                     .padding(.horizontal)
             }
-            .navigationDestination(isPresented: $BackSelectedView) {
-                SelectedView()
-            }
+//            Button {
+//                BackSelectedView = true
+//            } label: {
+//                Text("홈 화면")
+//                    .font(.headline)
+//                    .foregroundColor(.white)
+//                    .frame(maxWidth: .infinity)
+//                    .frame(height: 50)
+//                    .background(Color(hex: "5ea152"))
+//                    .cornerRadius(25)
+//                    .padding(.horizontal)
+//            }
+//            .navigationDestination(isPresented: $BackSelectedView) {
+//                HHistoryView()
+//            }
             Spacer()
         }
         .padding()
-        .navigationTitle("maze Runner")
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                Text("maze Runner")
+                    .font(.custom("Aclonica-Regular", size: 20))
+                    .foregroundColor(Color(hex: "5ea152"))
+                
+            }
+        }
         .navigationBarTitleDisplayMode(.inline)
         .onAppear {
             //MARK: 등록된 러너들불러옴

@@ -12,6 +12,7 @@ struct ListView: View {
     
     @Environment(\.modelContext) var modelContext
     @State private var viewModel: MazeViewModel
+    @State private var showMatchigView: Bool = false
     
     init(viewModel: MazeViewModel) {
         _viewModel = State(initialValue: viewModel)
@@ -19,22 +20,26 @@ struct ListView: View {
     
     var body: some View {
         
-            List {
-                ForEach(viewModel.currentSessionAnswer, id: \.id) { answer in
-                    if let question = Question.allQuestions.first(where: { $0.id == answer.quewstionID }) {
-                        HStack {
-                            Text("\(question.answers[answer.selectedIndex].text) \(question.answers[answer.selectedIndex].emoji)")
-                                .multilineTextAlignment(.center)
-                        }
-                        .frame(maxWidth: .infinity)
-                        .frame(height: 80)
-                        .background(Color(hex: "5ea152").opacity(0.5))
-                        .cornerRadius(10)
-                        .listRowBackground(Color.clear)
-                        .listRowSeparator(.hidden)
+        List {
+            ForEach(viewModel.currentSessionAnswer, id: \.id) { answer in
+                if let question = Question.allQuestions.first(where: { $0.id == answer.quewstionID }) {
+                    HStack {
+                        Text("\(question.answers[answer.selectedIndex].text) \(question.answers[answer.selectedIndex].emoji)")
+                            .multilineTextAlignment(.center)
                     }
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 80)
+                    .background(Color(hex: "5ea152").opacity(0.5))
+                    .cornerRadius(10)
+                    .listRowBackground(Color.clear)
+                    .listRowSeparator(.hidden)
+                }
             }
-                NavigationLink(destination: MatchingView(viewModel: viewModel)) {
+            Button(action: {
+                
+                showMatchigView = true
+                
+            }) {
                 Text("너 누구야?")
                     .font(.system(size: 20, weight: .medium))
                     .foregroundColor(.black)
@@ -45,15 +50,42 @@ struct ListView: View {
             }
             .listRowBackground(Color.clear)
             .listRowSeparator(.hidden)
+            .buttonStyle(PlainButtonStyle())
+            .navigationDestination(isPresented: $showMatchigView, destination: {
+                MatchingView(viewModel: viewModel)
+            })
+            
+//            NavigationLink(destination: MatchingView(viewModel: viewModel)) {
+//                Text("너 누구야?")
+//                    .font(.system(size: 20, weight: .medium))
+//                    .foregroundColor(.black)
+//                    .frame(maxWidth: .infinity)
+//                    .frame(height: 50)
+//                    .padding(.vertical, 15)
+//                    .background(RoundedRectangle(cornerRadius: 20).fill(Color(hex: "5ea152")))
+//            }
+//            .listRowBackground(Color.clear)
+//            .listRowSeparator(.hidden)
+//            .buttonStyle(PlainButtonStyle())
+            
+            
             
             .padding(.bottom, 20)
         }
-        
-//        .onAppear {
-//            viewModel.loadSavedAnswers()
-//            answers = viewModel.savedAnswers
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                Text("maze Runner")
+                    .font(.custom("Aclonica-Regular", size: 20))
+                    .foregroundColor(Color(hex: "5ea152"))
+                
+            }
         }
+        
+        //        .onAppear {
+        //            viewModel.loadSavedAnswers()
+        //            answers = viewModel.savedAnswers
     }
+}
 
 
 struct ListView_Previews: PreviewProvider {
