@@ -73,16 +73,122 @@ struct Questions: Identifiable {
                 Answer(text: "에너지를 사람들과 나누는 편", emoji: "🤩")
             ]
         ),
-//        Question(
-//            id: UUID(uuidString: "H8I9J0K1-L2M3-54N5-O6P7-Q8R9S0T1U2V3") ?? UUID(),
-//            text: "당신은 어떤 사람인가요?",
-//            answers: [
-//                Answer(text: "미리 계획을 세우고, 그 계획대로 일이 진행되는 걸 선호해요!", emoji: "🗺️"),
-//                Answer(text: "상황에 맞게 유연하게 대처하고, 즉흥적인 선택도 즐기는 편이에요!", emoji: "🕺")
-//            ]
-//        ),
+        Questions(
+            id: "H8I9J0K1-L2M3-54N5-O6P7-Q8R9S0T1U2V3",
+            text: "당신은 어떤 사람인가요??",
+            answers: [
+                Answer(text: "미리 계획을 세우고, 그 계획대로 일이 진행되는 걸 선호해요!", emoji: "🗺️"),
+                Answer(text: "상황에 맞게 유연하게 대처하고, 즉흥적인 선택도 즐기는 편이에요!", emoji: "🕺")
+            ]
+        ),
+        Questions(
+            id: "I9J0K1L2-M3N4-55O5-P6Q7-R8S9T0U1V2W3",
+            text: "새로운 사람을 만날 때 당신은?",
+            answers: [
+                Answer(text: "간택하는 사람", emoji: "😽"),
+                Answer(text: "간택을 기다리는 사람", emoji: "😺")
+            ]
+        ),
+        Questions(
+            id: "J0K1L2M3-N4O5-56P6-Q7R8-S9T0U1V2W3X4",
+            text: "어떤 것이 더 좋나요?",
+            answers: [
+                Answer(text: "솔직히 조언 해주기", emoji: "😉"),
+                Answer(text: "친구가 언제나 내 편 들어주기", emoji: "☺️")
+            ]
+        ),
+        Questions(
+            id: "K1L2M3N4-O5P6-57Q7-R8S9-T0U1V2W3X4Y5",
+            text: "어떤게 더 좋나요?",
+            answers: [
+                Answer(text: "노력해서 얻은 성취", emoji: "🔥"),
+                Answer(text: "예상치 못한 행운", emoji: "🍀")
+            ]
+        ),
+        Questions(
+            id: "L2M3N4O5-P6Q7-58R8-S9T0-U1V2W3X4Y5Z6",
+            text: "열심히 공부하는 당신! 어디서 공부하고 싶나요?",
+            answers: [
+                Answer(text: "도서관 카페 등의 공공장소", emoji: "🏙️"),
+                Answer(text: "집 또는 나만이 혼자 있을 수 있는 공간", emoji: "🚪")
+            ]
+        ),
+        Questions(
+            id: "M3N4O5P6-Q7R8-59S9-T0U1-V2W3X4Y5Z6A7",
+            text: "팀플을 하는 당신, 어떤 편인가요?",
+            answers: [
+                Answer(text: "팀 내 즉흥 브레인스토밍", emoji: "🧠"),
+                Answer(text: "혼자 생각 정리 후 제안", emoji: "🧐")
+            ]
+        ),
+        Questions(
+            id: "N4O5P6Q7-R8S9-60T0-U1V2-W3X4Y5Z6A7B8",
+            text: "누군가와 싸웠을 때 당신은?",
+            answers: [
+                Answer(text: "바로 바로 푼다", emoji: "✋🏻"),
+                Answer(text: "일단 회피한다", emoji: "🙈")
+            ]
+        ),
+        Questions(
+            id: "O5P6Q7R8-S9T0-61U1-V2W3-X4Y5Z6A7B8C9",
+            text: "당신은 어떤 어떤 중심인가요?",
+            answers: [
+                Answer(text: "결과 중심", emoji: "👍"),
+                Answer(text: "과정 중심", emoji: "➡️")
+            ]
+        ),
+        Questions(
+            id: "P6Q7R8S9-T0U1-62V2-W3X4-Y5Z6A7B8C9D0",
+            text: "어떤 일을 할 때 당신은?",
+            answers: [
+                Answer(text: "일단 질러! 고민하지 않고 바로 시도하는 편", emoji: "😜"),
+                Answer(text: "생각 먼저.. 긴 고민 후 시도해도 늦지 않아", emoji: "🫠")
+            ]
+        ),
+        Questions(
+            id: "Q7R8S9T0-U1V2-63W3-X4Y5-Z6A7B8C9D0E1",
+            text: "취업과 창업 중 하나를 선택하자면?",
+            answers: [
+                Answer(text: "창업", emoji: "💡"),
+                Answer(text: "취업", emoji: "💼")
+            ]
+        ),
+        Questions(
+            id: "R8S9T0U1-V2W3-64X4-Y5Z6-A7B8C9D0E1F2",
+            text: "남녀 사이에 친구가?",
+            answers: [
+                Answer(text: "있다", emoji: "‼️"),
+                Answer(text: "없다", emoji: "❌")
+            ]
+        ),
+        Questions(
+            id: "S9T0U1V2-W3X4-65Y5-Z6A7-B8C9D0E1F2G3",
+            text: "연애할 때 당신은?",
+            answers: [
+                Answer(text: "2주에 한 번 만나기", emoji: "✌🏻"),
+                Answer(text: "매일 매일 만나기", emoji: "😘")
+            ]
+        ),
+        Questions(
+            id: "T0U1V2W3-X4Y5-66Z6-A7B8-C9D0E1F2G3H4",
+            text: "라이프저니! 러너들에게 서로 공유하실 수 있나요?",
+            answers: [
+                Answer(text: "아니요! 공개하지 않고 다른 러너 것도 안 볼래요", emoji: "🙅🏻‍♀️"),
+                Answer(text: "넵! 저도 공개하고 다른 러너 것도 볼래요", emoji: "🙆🏻‍♀️")
+            ]
+        ),
+        Questions(
+            id: "U1V2W3X4-Y5Z6-67A7-B8C9-D0E1F2G3H4I5",
+            text: "당신의 유니크 포인트를 알려주세요!",
+            answers: [
+                Answer(text: "아니요! 공개하지 않고 다른 러너 것도 안 볼래요", emoji: "🙅🏻‍♀️"),
+                Answer(text: "넵! 저도 공개하고 다른 러너 것도 볼래요", emoji: "🙆🏻‍♀️")
+            ]
+        )
     ]
 }
+
+
 extension Questions {
     static let idByText: [String: String] = {
         Dictionary(

@@ -10,38 +10,53 @@ import SwiftData
 
 
 @Observable
+
 final class MazeViewModel: ObservableObject {
     
     // SwiftData 저장
     private let modelContext: ModelContext?
-    
     var runner: Runner
+    
+    init(
+        runner: Runner,
+        modelContext: ModelContext?
+    ) {
+        self.runner = runner
+        self.modelContext = modelContext
+        self.currentSessionID = UUID()
+        self.timeStamp = Date()
+        
+        loadPreloadedRunners()
+    }
+    
     
     // 현재 보여지는 질문의 인덱스
     private(set) var currentQuestionIndex = 0
-    private(set) var currentSessionAnswer: [RunnerAnswer] = []
     // 랜덤으로 선택된 7개의 질문 배열
     private(set) var selectedRandomQuestion: [Question] = []
     
+    
     var currentSessionID: UUID
     var timeStamp: Date
+    private(set) var currentSessionAnswer: [RunnerAnswer] = []
+    
+    
     private var preloadedRunners: [Runners] = []
     var matchedRunnerName: String = ""
     
+    
     // 사용자가 선택한 답변들을 저장하는 배열
     // 배열 인덱스로만 비교하는것은 안될거같아서 키값을 사용
-    private(set) var answerDictionary: [UUID: Int] = [:]
     
     private(set) var savedAnswers: [RunnerAnswer] = []
+    private(set) var sessionGroupes: [SessionGroup] = []
+    private(set) var answerDictionary: [UUID: Int] = [:]
     
-    private(set) var latestSavedAnswers: [RunnerAnswer] = []
+    
     
     private(set) var matchedRunner: MatchedRunner?
     
-    private(set) var sessionGroupes: [SessionGroup] = []
-    
-    
-    
+
     // 현재 표시되어야 하는 질문
     var currentQuestion: Question? {
         guard !selectedRandomQuestion.isEmpty,
@@ -59,24 +74,18 @@ final class MazeViewModel: ObservableObject {
         return currentQuestionIndex == selectedRandomQuestion.count - 1 &&
         answerDictionary.count == selectedRandomQuestion.count
     }
-    
-    
     // 현재까지의 답변 수
     var answerdCount: Int {
         answerDictionary.count
     }
     
-    init(
-        runner: Runner,
-        modelContext: ModelContext?
-    ) {
-        self.runner = runner
-        self.modelContext = modelContext
-        self.currentSessionID = UUID()
-        self.timeStamp = Date()
-        
-        loadPreloadedRunners()
+    // 다음 질문으로 이동
+    func moveToNextQuestion() {
+        guard currentQuestionIndex < selectedRandomQuestion.count - 1 else { return }
+        currentQuestionIndex += 1
     }
+
+
     
     func loadPreloadedRunners() {
         guard let url = Bundle.main.url(forResource: "RunnersData", withExtension: "json"),
@@ -291,18 +300,7 @@ final class MazeViewModel: ObservableObject {
         }
     }
     
-    
-    
-    
-    
-    // 다음 질문으로 이동
-    func moveToNextQuestion() {
-        guard currentQuestionIndex < selectedRandomQuestion.count - 1 else { return }
-        currentQuestionIndex += 1
-    }
-    
-    
-    
+
     
     struct RunnersDataContainer: Decodable {
         let runners: [MatchedRunner]
@@ -328,37 +326,6 @@ extension MazeViewModel {
         var timestamp: Date
         var answers: [RunnerAnswer]
     }
-    
-//    func loadSessionGroups() {
-//        guard let context = modelContext else { return }
-//        
-//        do {
-//            let descriptor = FetchDescriptor<RunnerAnswer>(
-//                sortBy: [SortDescriptor(\.timestamp, order: .reverse)]
-//            )
-//            let allAnswers = try context.fetch(descriptor)
-//            
-//            // 세션 그룹화 (sessionID 별로)
-//            let grouped = Dictionary(grouping: allAnswers) { $0.sessionID }
-//            
-//            // 7개 단위로 필터
-//            sessionGroupes = grouped.compactMap { key, value in
-//                guard value.count == 7 else { return nil }
-//                return SessionGroup(
-//                    id: key,
-//                    timestamp: value.first?.timestamp ?? Date(),
-//                    answers: value.sorted { $0.timestamp < $1.timestamp}
-//                )
-//            }
-//            .sorted { $0.timestamp > $1.timestamp } // 최신 세션 정렬
-//            
-//            
-//        } catch {
-//            print("Error loading session groups: \(error)")
-//        }
-//        
-//        
-//    }
 }
 
 
