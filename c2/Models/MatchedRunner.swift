@@ -6,21 +6,21 @@
 import Foundation
 
 
-struct MatchedRunner: Codable, Identifiable {
-    let id: String
-    let nickname: String
-    let answers: [PreloadedAnswer]
-    var matchScore: Int = 0
-    
-    struct PreloadedAnswer: Codable {
-        let questionId: UUID
-        let selectedIndex: Int
-    }
-}
-
-struct RunnersDataContainer: Codable {
-    let runners: [MatchedRunner]
-}
+//struct MatchedRunner: Codable, Identifiable {
+//    let id: String
+//    let nickname: String
+//    let answers: [PreloadedAnswer]
+//    var matchScore: Int = 0
+//    
+//    struct PreloadedAnswer: Codable {
+//        let questionId: UUID
+//        let selectedIndex: Int
+//    }
+//}
+//
+//struct RunnersDataContainer: Codable {
+//    let runners: [MatchedRunner]
+//}
 
 
 //MARK: 실행되는 모델

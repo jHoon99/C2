@@ -42,11 +42,12 @@ struct MazeView: View {
                     VStack {
                         Text(currentQuestion.text)
                             .font(.title)
+                            .fontWeight(.bold)
                             .multilineTextAlignment(.center)
                             .lineSpacing(20)
                             .padding(.horizontal)
                     }
-                    .padding(.top, 100)
+                    .padding(.top, 90)
                     
                     Spacer()
                     

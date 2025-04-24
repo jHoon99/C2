@@ -36,9 +36,7 @@ struct ListView: View {
                 }
             }
             Button(action: {
-                
                 showMatchigView = true
-                
             }) {
                 Text("너 누구야?")
                     .font(.system(size: 20, weight: .medium))

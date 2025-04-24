@@ -26,7 +26,6 @@ final class MazeViewModel: ObservableObject {
         self.currentSessionID = UUID()
         self.timeStamp = Date()
         
-        loadPreloadedRunners()
     }
     
     
@@ -42,7 +41,6 @@ final class MazeViewModel: ObservableObject {
     
     
     private var preloadedRunners: [Runners] = []
-    var matchedRunnerName: String = ""
     
     
     // 사용자가 선택한 답변들을 저장하는 배열
@@ -52,9 +50,6 @@ final class MazeViewModel: ObservableObject {
     private(set) var sessionGroupes: [SessionGroup] = []
     private(set) var answerDictionary: [UUID: Int] = [:]
     
-    
-    
-    private(set) var matchedRunner: MatchedRunner?
     
 
     // 현재 표시되어야 하는 질문
@@ -86,7 +81,7 @@ final class MazeViewModel: ObservableObject {
     }
 
 
-    
+    // json데이터 디코딩
     func loadPreloadedRunners() {
         guard let url = Bundle.main.url(forResource: "RunnersData", withExtension: "json"),
               let data = try? Data(contentsOf: url) else {
@@ -102,7 +97,7 @@ final class MazeViewModel: ObservableObject {
         }
     }
     
-    //전체 러너들을 불러와서 계산을 시킴
+    //전체 러너들(loadPreloadedRunners)을 불러와서 계산을 시킴
     func findBestMatch() -> String {
         var answerArr:[Int] = []
         for runner in preloadedRunners {
@@ -145,47 +140,7 @@ final class MazeViewModel: ObservableObject {
     }
     
     
-//    func loadSavedAnswers() {
-//        do {
-//            let descriptor = FetchDescriptor<RunnerAnswer>(
-//                sortBy: [SortDescriptor(\.timestamp, order: .forward)]
-//            )
-//            let answers = try modelContext!.fetch(descriptor)
-//            savedAnswers = answers
-//        } catch {
-//            print("error: \(error)")
-//        }
-//    }
-//    
-    
-    
-    
-    // 답변하지 않은 질문들을 로드하고 랜덤하게 7개 선택
-    //    func loadQuestion() {
-    //        do {
-    //            // 기존 답변들 조회
-    //            let descriptor = FetchDescriptor<RunnerAnswer>()
-    //            let answers = try modelContext!.fetch(descriptor)
-    //            let answerdDict = Dictionary(
-    //                answers.map { ( $0.quewstionID, $0.selectedIndex ) },
-    //                uniquingKeysWith: { first, _ in first}
-    //            )
-    //
-    //            // 답변하지 않은 질문들 필터링
-    //            let availableQuestions = Question.allQuestions.filter { !answerdDict.keys.contains($0.id) }
-    //
-    //            // 답변하지 않은 질문들 중에서 7개 랜덤 선택
-    //            selectedRandomQuestion = Array(availableQuestions.shuffled().prefix(7))
-    //
-    ////            answerDictionary.removeAll()
-    ////
-    ////            currentQuestionIndex = 0
-    //
-    //        } catch {
-    //            selectedRandomQuestion = Array(Question.allQuestions.shuffled().prefix(7))
-    //        }
-    //    }
-    
+    // mazeView에 7개 랜덤질문 뿌리기
     func loadQuestion() {
         selectedRandomQuestion = Array(Question.allQuestions.shuffled().prefix(7))
         answerDictionary.removeAll()
@@ -247,6 +202,9 @@ final class MazeViewModel: ObservableObject {
         }
     }
     
+    
+    
+    
     func loadSessionGroups() {
         guard let context = modelContext else { return }
         
@@ -276,46 +234,6 @@ final class MazeViewModel: ObservableObject {
         }
         
         
-    }
-
-    
-    // 저장된 답변들을 불러오는 메서드
-    func loadSavedAnswers() {
-        do {
-            guard let context = modelContext else {
-                print("modelContext is nil")
-                return
-            }
-            
-            var descriptor = FetchDescriptor<RunnerAnswer>(
-                sortBy: [SortDescriptor(\.timestamp, order: .reverse)]
-            )
-            descriptor.fetchLimit = 14
-            
-            let answers = try context.fetch(descriptor)
-            savedAnswers = answers.reversed()
-            
-        } catch {
-            print("error \(error)")
-        }
-    }
-    
-
-    
-    struct RunnersDataContainer: Decodable {
-        let runners: [MatchedRunner]
-    }
-
-    struct MatchedRunner: Identifiable, Decodable {
-        let id: String
-        let nickname: String
-        let answers: [PreloadedAnswer]
-        var matchScore: Int = 0
-        
-        struct PreloadedAnswer: Decodable {
-            let questionId: UUID
-            let selectedIndex: Int
-        }
     }
 }
 

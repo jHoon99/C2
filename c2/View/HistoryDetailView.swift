@@ -27,6 +27,8 @@ struct HistoryDetailView: View {
                 HStack {
                     Text("\(answers.selectedText) \(answers.selectedEmoji)")
                 }
+                .padding()
+                .multilineTextAlignment(.center)
                 .frame(maxWidth: .infinity)
                 .frame(height: 80)
                 .background(Color(hex: "5ea152").opacity(0.5))

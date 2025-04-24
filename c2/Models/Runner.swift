@@ -18,7 +18,8 @@ struct Runner: Identifiable {
 extension Runner {
     
     static func isNicknameValid(_ nickname: String) -> Bool {
-        return runnerNickname.contains(nickname.lowercased())
+        let inputNickname = nickname
+        return runnerNickname.contains(inputNickname.lowercased())
     }
     
     static let runnerNickname = [

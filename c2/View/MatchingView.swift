@@ -10,6 +10,7 @@ import SwiftData
 
 
 struct MatchingView: View {
+    
     @Environment(\.modelContext) private var modelContext
     @StateObject var viewModel: MazeViewModel
     @State var BackSelectedView: Bool = false
@@ -75,6 +76,7 @@ struct MatchingView: View {
 //            }
             Spacer()
         }
+        .padding(.top, 50)
         .padding()
         .toolbar {
             ToolbarItem(placement: .principal) {
